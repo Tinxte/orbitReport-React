@@ -1,5 +1,5 @@
 import satData from "./satData";
-
+import styling from "./styling.css"
 
 
 

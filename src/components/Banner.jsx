@@ -1,3 +1,5 @@
+import styling from "./styling.css"
+
 function Banner() {
     return(
         <header>
