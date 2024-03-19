@@ -14,10 +14,10 @@ const Table = ({ sat }) => {
 
   const rows = sat.map((data, id) =>
   <tr key ={id}>
-  <td key = {data.id}>{data.name}</td>
-  <td key = {data.id}>{data.type}</td>
-  <td key = {data.id}>{data.launchDate}</td>
-  <td key = {data.id}>{Status(data)}</td>
+  <td key = {id}>{data.name}</td>
+  <td key = {id}>{data.type}</td>
+  <td key = {id}>{data.launchDate}</td>
+  <td key = {id}>{Status(data)}</td>
   </tr>);
 
   return (
@@ -31,9 +31,6 @@ const Table = ({ sat }) => {
      </tr>
      </thead>
      <tbody>
-     {/* <tr>
-       <td>Row Data TBD</td>
-     </tr> */}
     {rows}
      </tbody>
    </table>
