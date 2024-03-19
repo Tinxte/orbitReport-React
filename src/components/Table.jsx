@@ -1,4 +1,25 @@
+import satData from "./satData";
+
+
+
+
 const Table = ({ sat }) => {
+
+  function Status(props) {
+    const isOperational = props.operational;
+    if(isOperational === true){
+      return ("Active")
+    } else return ("Inactive")
+  }
+
+  const rows = sat.map((data, id) =>
+  <tr key ={id}>
+  <td key = {data.id}>{data.name}</td>
+  <td key = {data.id}>{data.type}</td>
+  <td key = {data.id}>{data.launchDate}</td>
+  <td key = {data.id}>{Status(data)}</td>
+  </tr>);
+
   return (
     <table>
     <thead>
@@ -10,12 +31,14 @@ const Table = ({ sat }) => {
      </tr>
      </thead>
      <tbody>
-     <tr>
+     {/* <tr>
        <td>Row Data TBD</td>
-     </tr>
+     </tr> */}
+    {rows}
      </tbody>
    </table>
   );
 };
+
 
 export default Table;
